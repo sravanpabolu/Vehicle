@@ -1,27 +1,40 @@
 
-<span class="Section_Header"> Add Vehicle </span>
-<table>
-    <tr>
-        <td>Vehicle Nickname</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Vehicle Name</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Registration Number</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Fuel Type</td>
-        <td>
-            <input type="radio" name="FuelType"> Petrol 
-            <input type="radio" name="FuelType"> Diesel 
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit"></td>
-    </tr>
-</table>
+<!-- <span class="Section_Header"> Add Vehicle </span> -->
+<form [formGroup]="angForm" novalidate>
+    <div class="form-group">
+        <table>
+            <tr>
+                <td>Vehicle Nickname</td>
+                <td><input type="text" class="form-control" formControlName="nickName"></td>
+
+                <!-- <div *ngIf="angForm.controls['nickName'].invalid && (angForm.controls['nickName'].dirty || 
+                            angForm.controls['nickName'].touched)" class="alert alert-danger">
+                        <div *ngIf="angForm.controls['nickName'].errors.required">
+                          Nick Name is required.
+                </div> -->
+            </tr>
+            <tr>
+                <td>Vehicle Name</td>
+                <td><input type="text" class="form-control" formControlName="vehicleName"></td>
+            </tr>
+            <tr>
+                <td>Registration Number</td>
+                <td><input type="text" class="form-control" formControlName="registrationNumber"></td>
+            </tr>
+            <tr>
+                <td>Fuel Type</td>
+                <td>
+                    <input type="radio" class="form-control" formControlName="fuelType"> Petrol 
+                    <input type="radio" class="form-control" formControlName="fuelType"> Diesel 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <!-- <td><input type="submit"></td> -->
+                <td>
+                    <button type="submit" class="btn btn-primary" (click)="addVehicle(nickName.value, vehicleName.value, registrationNumber.value, fuelType.value)"> Add </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

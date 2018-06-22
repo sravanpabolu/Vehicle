@@ -6,17 +6,14 @@
 <!-- <a [routerLink] = "['/AddVehicle']"> Add Vehicle </a> <br> <br>
 <a [routerLink] = "['/app-vehicle-summary']"> Vehicle Summary </a> -->
 
-<button> New Vehicle </button>
 
-<br><br><br>
-
-<nav>
-    <a routerLink = "AddVehicle">Add Vehicle</a>
-    <a routerLink = "VehicleSummary" routerLinkActive = "active">Vehicle Summary</a>
+<nav class="navbar navbar-dark bg-primary">
+    <a routerLink = "AddVehicle" class="btn btn-primary">Add Vehicle</a>
+    <a routerLink = "VehicleSummary"  class="btn btn-primary" routerLinkActive = "active">Vehicle Summary</a>
+    <!-- <button type="button" class="btn btn-light" > Add vehicle</button> -->
 </nav>
 <hr>
 <router-outlet></router-outlet>
-
 
 
 
