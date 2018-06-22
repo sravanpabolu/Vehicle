@@ -1,0 +1,16 @@
+<span class="Section_Header">Vehicle Summary:</span> 
+<br>
+<table border="true">
+  <tr>
+    <th>Nick Name</th>
+    <th>Vehicle Name</th>
+    <th>Fuel Type</th>
+    <th>Registration Number</th>
+  </tr>
+  <tr *ngFor = 'let aVehicle of vehicleData'>
+    <td> {{aVehicle.nickName}} </td>
+    <td> {{aVehicle.name}} </td>
+    <td> {{aVehicle.fuelType}} </td>
+    <td> {{aVehicle.registrationNumber}} </td>
+  </tr>
+</table> 

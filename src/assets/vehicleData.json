@@ -1,0 +1,20 @@
+[ 
+    {
+      "nickName" : "pulsar",
+      "name" : "Bajaj Pulsar 180",
+      "fuelType" : "Petrol",
+      "registrationNumber" : "TN10X6622"
+    },
+    {
+      "nickName": "activa",
+      "name" : "Honda Activa 110",
+      "fuelType" : "Petrol",
+      "registrationNumber": "TN11X2266"
+    },
+    {
+      "nickName": "swift",
+      "name" : "Maruthi Swift VXI",
+      "fuelType" : "Petrol",
+      "registrationNumber": "TN10AU2662"
+    }
+]
