@@ -1,6 +1,6 @@
 
 <!-- <span class="Section_Header"> Add Vehicle </span> -->
-<form [formGroup]="angForm" novalidate>
+<form [formGroup]="addVehicleForm" novalidate>
     <div class="form-group">
         <table>
             <tr>
@@ -24,7 +24,7 @@
             <tr>
                 <td>Fuel Type</td>
                 <td>
-                    <input type="radio" class="form-control" formControlName="fuelType"> Petrol 
+                    <input type="radio" class="form-control" formControlName="fuelType" checked> Petrol 
                     <input type="radio" class="form-control" formControlName="fuelType"> Diesel 
                 </td>
             </tr>
@@ -32,7 +32,9 @@
                 <td></td>
                 <!-- <td><input type="submit"></td> -->
                 <td>
-                    <button type="submit" class="btn btn-primary" (click)="addVehicle(nickName.value, vehicleName.value, registrationNumber.value, fuelType.value)"> Add </button>
+                    <button type="submit" class="btn btn-primary" (click)="addVehicle(addVehicleForm.nickName
+                    , 2,3,4
+                    )"> Add </button>
                 </td>
             </tr>
         </table>

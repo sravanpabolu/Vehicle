@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { FBVehicleService } from '../fbvehicle.service';
 
 @Component({
@@ -9,15 +9,19 @@ import { FBVehicleService } from '../fbvehicle.service';
 })
 export class AddVehicleComponent implements OnInit {
 
-  angForm: FormGroup;
+  addVehicleForm: FormGroup;
   
-  constructor(private vehicleService: FBVehicleService, private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder) { 
     this.createForm()
   }
 
   createForm() {
-    this.angForm = this.formBuilder.group( {
+    this.addVehicleForm = this.formBuilder.group( {
       nickName: ['', Validators.required],
+      // nickName: new FormControl('', Validators.compose([
+      //   Validators.required
+      // ])),
+
       vehicleName: ['', Validators.required],
       registrationNumber: ['', Validators.required],
       fuelType: ['', Validators.required]
